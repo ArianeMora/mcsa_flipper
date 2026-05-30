@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M-CSA Enzyme Mechanism Flashcards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=IBM+Plex+Serif:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top">
+        <p class="eyebrow">M-CSA stepwise trainer</p>
+        <h1>Enzyme Mechanism Flashcards</h1>
+        <p id="reactionTitle" class="reaction-title">Loading reactions...</p>
+      </header>
+
+      <section
+        id="flashcard"
+        class="flashcard"
+        role="button"
+        tabindex="0"
+        aria-label="Tap to move to the next step"
+      >
+        <article class="card-face card-front" id="frontFace">
+          <p class="meta" id="stepMeta">Step</p>
+          <img id="stepImage" alt="Mechanism step illustration" />
+          <p class="hint">Tap card for next step</p>
+        </article>
+
+        <article class="card-face card-back hidden" id="backFace">
+          <p class="meta" id="explainMeta">Explanation</p>
+          <p id="stepExplanation" class="explanation"></p>
+          <p class="hint">Tap card for next step</p>
+        </article>
+      </section>
+
+      <footer class="controls">
+        <button id="flipBtn" class="btn" type="button">Flip Explanation</button>
+        <button id="nextReactionBtn" class="btn btn-primary" type="button" disabled>
+          Next Reaction
+        </button>
+      </footer>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

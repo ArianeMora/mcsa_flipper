@@ -1,0 +1,154 @@
+:root {
+  --bg: #f6f4ec;
+  --ink: #1e2932;
+  --muted: #55636f;
+  --card: #fffdf7;
+  --accent: #0f766e;
+  --accent-2: #b45309;
+  --border: #d6d8cc;
+  --shadow: 0 14px 40px rgba(16, 24, 40, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: "Manrope", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 10%, #ffedd5 0%, transparent 35%),
+    radial-gradient(circle at 85% 0%, #dbeafe 0%, transparent 33%),
+    var(--bg);
+}
+
+.app {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 20px 16px 28px;
+}
+
+.top h1 {
+  margin: 4px 0 8px;
+  font-size: clamp(1.4rem, 4.5vw, 2rem);
+  line-height: 1.15;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.reaction-title {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.flashcard {
+  margin-top: 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  min-height: 58vh;
+  display: flex;
+  cursor: pointer;
+  outline: none;
+  transition: transform 140ms ease;
+}
+
+.flashcard:active {
+  transform: scale(0.995);
+}
+
+.card-face {
+  width: 100%;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meta {
+  margin: 0;
+  font-weight: 800;
+  color: var(--accent-2);
+}
+
+#stepImage {
+  width: 100%;
+  height: auto;
+  max-height: 48vh;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fbfaf4;
+  border: 1px solid #eceadf;
+}
+
+.explanation {
+  margin: 0;
+  font-family: "IBM Plex Serif", serif;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.hint {
+  margin: auto 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: #fcfcf8;
+  color: var(--ink);
+  border-radius: 12px;
+  padding: 12px 10px;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+}
+
+.status {
+  margin: 12px 2px 0;
+  min-height: 1.4em;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .flashcard {
+    min-height: 62vh;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
