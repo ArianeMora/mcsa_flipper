@@ -92,6 +92,85 @@ body {
   border: 1px solid #eceadf;
 }
 
+.visual-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reaction-visual {
+  border: 1px solid #eceadf;
+  border-radius: 12px;
+  background: #fbfaf4;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+
+.reaction-visual img {
+  width: 100%;
+  max-height: 110px;
+  object-fit: contain;
+}
+
+.reaction-arrow {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-2);
+}
+
+.front-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.roles-panel {
+  border: 1px solid #e3e1d7;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fbfaf4;
+  min-height: 100%;
+}
+
+.roles-title {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.roles-list {
+  margin: 0;
+  padding-left: 16px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.intro-summary {
+  margin: 0;
+  font-family: "IBM Plex Serif", serif;
+  line-height: 1.55;
+  font-size: 1rem;
+}
+
+#structureImage {
+  width: 100%;
+  max-height: 40vh;
+  border-radius: 12px;
+  object-fit: contain;
+  border: 1px solid #eceadf;
+  background: #fbfaf4;
+}
+
 .explanation {
   margin: 0;
   font-family: "IBM Plex Serif", serif;
@@ -107,7 +186,7 @@ body {
 
 .controls {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-top: 14px;
 }
@@ -146,6 +225,10 @@ body {
 @media (max-width: 480px) {
   .flashcard {
     min-height: 62vh;
+  }
+
+  .front-layout {
+    grid-template-columns: 1fr;
   }
 
   .controls {

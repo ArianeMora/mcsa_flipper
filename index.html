@@ -29,18 +29,34 @@
       >
         <article class="card-face card-front" id="frontFace">
           <p class="meta" id="stepMeta">Step</p>
-          <img id="stepImage" alt="Mechanism step illustration" />
+          <div class="front-layout">
+            <div class="visual-panel">
+              <img id="stepImage" alt="Mechanism step illustration" />
+              <div id="reactionVisual" class="reaction-visual hidden" aria-label="Reaction overview image">
+                <img id="reactantImage" alt="Reactant" />
+                <span class="reaction-arrow" aria-hidden="true">-></span>
+                <img id="productImage" alt="Product" />
+              </div>
+            </div>
+            <aside class="roles-panel">
+              <p class="roles-title">Catalytic Residue Roles</p>
+              <ul id="rolesList" class="roles-list"></ul>
+            </aside>
+          </div>
+          <p id="introSummary" class="intro-summary hidden"></p>
           <p class="hint">Tap card for next step</p>
         </article>
 
         <article class="card-face card-back hidden" id="backFace">
           <p class="meta" id="explainMeta">Explanation</p>
           <p id="stepExplanation" class="explanation"></p>
+          <img id="structureImage" class="hidden" alt="Protein structure" />
           <p class="hint">Tap card for next step</p>
         </article>
       </section>
 
       <footer class="controls">
+        <button id="backBtn" class="btn" type="button">Back Step</button>
         <button id="flipBtn" class="btn" type="button">Flip Explanation</button>
         <button id="nextReactionBtn" class="btn btn-primary" type="button" disabled>
           Next Reaction
